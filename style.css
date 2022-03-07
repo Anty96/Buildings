@@ -1,0 +1,274 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+p {
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
+}
+
+body {
+	background-color: #080e21;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 10px;
+	color: #fefcfb;
+	height: 2000px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	min-width: 1200px;
+}
+
+.header {
+	position: relative;
+	background-image: url('1.jpg');
+	height: 330px;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0, 0.6);
+}
+
+.hero-text {
+	position: absolute;
+	color: #fefcfb;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+	margin-bottom: 0.5rem;
+	font-size: 2rem;
+	color: #fbf9ef;
+}
+
+h1::selection {
+	background-color: black;
+}
+
+.hero-text h1 span {
+	color: #fbf3ef;
+}
+
+nav {
+	background-color: #fefcfb;
+	z-index: 5;
+}
+
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: -1px;
+}
+
+.nav-items {
+	text-align: center;
+	justify-content: space-between;
+	display: flex;
+}
+
+.main {
+	padding: 10% 20%;
+	font-size: 1.5rem;
+}
+
+.burger-icon {
+	display: block;
+	font-size: 1.5rem;
+	padding: 0 1.5rem;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.btns {
+	flex-direction: column;
+	width: 100%;
+	transition: background-color 1s;
+}
+
+.btns:hover {
+	background-color: #001f54;
+}
+
+.btns a {
+	width: 100%;
+	padding: 1rem 0;
+	font-size: 1.1rem;
+	text-decoration: none;
+	color: #001f54;
+	display: inline-block;
+	transition: color 1s;
+}
+
+.btns a:hover {
+	color: #f7f2de;
+}
+
+.main p {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+#list-of-criterias {
+	list-style: circle;
+	font-style: italic;
+	padding-bottom: 2rem;
+}
+
+.history {
+	cursor: pointer;
+	z-index: 0;
+	position: relative;
+	background-image: url('3piramide.jpg');
+	height: 330px;
+	background-size: cover;
+	background-position: center;
+}
+
+.history-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0, 0.6);
+	transition: background-color linear 0.5s;
+}
+
+.history-bg-mouseover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0, 0.1);
+	transition: background-color linear 0.3s;
+}
+
+.history-text h2 {
+	position: absolute;
+	color: #fefcfb;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hidden-history {
+	visibility: hidden;
+	transform: translateY(1);
+	transition: linear 0.5s;
+	height: 0;
+}
+
+.hidden-history p {
+	visibility: hidden;
+	transition: linear 0s;
+}
+
+.hidden-history-active {
+	cursor: pointer;
+	background-color: #fefcfb;
+	color: #001f54;
+	padding: 1rem;
+	transform: translateY(80);
+	transform-origin: 0;
+	transition: linear 0.5s;
+}
+
+.hidden-history-active p {
+	visibility: visible;
+	transition: linear 0s;
+}
+
+@media (max-width: 576px) {
+	.btns {
+		display: none;
+	}
+	.burger-icon {
+		margin-left: auto;
+	}
+	.hero-text h1 {
+		font-size: 1.7rem;
+		text-align: center;
+	}
+	.hero-text p {
+		text-align: center;
+		margin-bottom: 0.5rem;
+		font-size: 0.6rem;
+		font-weight: 800;
+	}
+}
+
+@media (min-width: 576px) {
+	.btns {
+		display: none;
+	}
+
+	.burger-icon {
+		margin-left: auto;
+	}
+
+	.hero-text h1 {
+		font-size: 2.5rem;
+		text-align: center;
+	}
+	.hero-text p {
+		text-align: center;
+		margin-bottom: 0.5rem;
+		font-size: 0.6rem;
+		font-weight: 800;
+	}
+}
+
+@media (min-width: 768px) {
+	.burger-icon {
+		display: none;
+	}
+	.btns {
+		display: flex;
+	}
+	.hero-text h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	.hero-text p {
+		text-align: center;
+		margin-bottom: 0.5rem;
+		font-size: 0.8rem;
+		font-weight: 800;
+	}
+}
+
+@media (min-width: 1200px) {
+	.burger-icon {
+		display: none;
+	}
+
+	.hero-text h1 {
+		font-size: 5rem;
+		text-align: center;
+	}
+
+	.hero-text p {
+		text-align: center;
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+		font-weight: 800;
+	}
+}
